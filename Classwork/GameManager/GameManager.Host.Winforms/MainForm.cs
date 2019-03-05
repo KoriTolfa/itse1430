@@ -55,7 +55,15 @@ namespace GameManager.Host.Winforms
 
             Close();
         }
+        //HACK: Find first spot in array with no game
+        private int GetNextEmptyGame()
+        {
+            for (var index = 0; index < _games.Length; ++index)
+                if (_games[index] == null)
+                    return index;
 
+        }
+        Button
         private void OnHelpAbout( object sender, EventArgs e )
         {
             var form = new AboutBox();
@@ -104,7 +112,7 @@ namespace GameManager.Host.Winforms
             return game;
             }
 
-            private void GameForm_Load( object sender, EventArgs e )
+             void GameForm_Load( object sender, EventArgs e )
             {
                 //Init UI if editing a game
                 if (Game != null)
@@ -126,7 +134,16 @@ namespace GameManager.Host.Winforms
 
         private Game GetSelectedGame()
         {
-            return _game;
+            //c-style cast dont do it like this
+           // var game = (Game)value;
+            var value = _listGames.SelectedValue;
+            var game = value as Game;
+            //type check
+            var game2 = (value is Game) ? (Game)value : null;
+            //the is operator determines if the value in the left is compatibale with the type you requested
+
+       
+            return game;
         }
     }
 }
