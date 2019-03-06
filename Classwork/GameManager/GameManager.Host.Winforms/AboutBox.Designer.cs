@@ -1,4 +1,4 @@
-﻿namespace GameManager.Host.Winforms
+namespace GameManager.Host.Winforms
 {
     partial class AboutBox
     {
