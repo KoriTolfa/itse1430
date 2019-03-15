@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.329
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CharacterCreator.Winforms", "CharacterCreator.Winforms\CharacterCreator.Winforms.csproj", "{2D956DFA-48BB-498F-9BD5-7601404CE23D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2D956DFA-48BB-498F-9BD5-7601404CE23D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D956DFA-48BB-498F-9BD5-7601404CE23D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D956DFA-48BB-498F-9BD5-7601404CE23D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D956DFA-48BB-498F-9BD5-7601404CE23D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6D18D982-9F50-4F1E-BC66-E19D310019B3}
+	EndGlobalSection
+EndGlobal
