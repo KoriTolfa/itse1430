@@ -61,9 +61,9 @@
             // 
             this.groupBox1.Controls.Add(this.Rb_Female);
             this.groupBox1.Controls.Add(this.Rb_Male);
-            this.groupBox1.Location = new System.Drawing.Point(25, 62);
+            this.groupBox1.Location = new System.Drawing.Point(63, 157);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(137, 74);
+            this.groupBox1.Size = new System.Drawing.Size(137, 68);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Character Gender";
@@ -101,7 +101,7 @@
             "Half Elf",
             "Human",
             "Metal Head"});
-            this.Cb_CharacterClass.Location = new System.Drawing.Point(80, 160);
+            this.Cb_CharacterClass.Location = new System.Drawing.Point(63, 73);
             this.Cb_CharacterClass.Name = "Cb_CharacterClass";
             this.Cb_CharacterClass.Size = new System.Drawing.Size(121, 21);
             this.Cb_CharacterClass.TabIndex = 3;
@@ -109,7 +109,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(22, 160);
+            this.label1.Location = new System.Drawing.Point(24, 73);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(33, 13);
             this.label1.TabIndex = 4;
@@ -125,7 +125,7 @@
             "Priest",
             "Rogue",
             "Wizard"});
-            this.comboBox1.Location = new System.Drawing.Point(80, 212);
+            this.comboBox1.Location = new System.Drawing.Point(63, 110);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 5;
@@ -133,7 +133,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(22, 215);
+            this.label2.Location = new System.Drawing.Point(1, 110);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(56, 13);
             this.label2.TabIndex = 6;
