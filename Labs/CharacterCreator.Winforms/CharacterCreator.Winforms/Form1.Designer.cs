@@ -101,7 +101,7 @@
             "Half Elf",
             "Human",
             "Metal Head"});
-            this.Cb_CharacterClass.Location = new System.Drawing.Point(80, 170);
+            this.Cb_CharacterClass.Location = new System.Drawing.Point(80, 160);
             this.Cb_CharacterClass.Name = "Cb_CharacterClass";
             this.Cb_CharacterClass.Size = new System.Drawing.Size(121, 21);
             this.Cb_CharacterClass.TabIndex = 3;
@@ -109,7 +109,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(22, 170);
+            this.label1.Location = new System.Drawing.Point(22, 160);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(33, 13);
             this.label1.TabIndex = 4;
