@@ -10,6 +10,7 @@ namespace CharacterCreator.Winforms.CharacterRaces
     {
         public Metalhead() : base()
         {
+            return 0;
 
         }
     }
