@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CharacterCreator.Winforms.CharacterRaces;
 
 namespace CharacterCreator.Winforms
 {
@@ -29,6 +30,10 @@ namespace CharacterCreator.Winforms
 
         private void B_SaveCharacter_Click(object sender, EventArgs e)
         {
+            //Dwarf Object 
+            Dwarf user1 = new Dwarf();
+        
+
             string output = " ";
             output += "Name: " + Txt_CharacterName.Text;
 

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace CharacterCreator.Winforms.CharacterRaces
 {
     public enum CharacterGender { Male, Female}
-    public abstract class CharacterRaces
+    public abstract class CharacterRaces //made this abstract to use a base for all other races
     {
         //fields
         protected string name;
@@ -63,7 +63,19 @@ namespace CharacterCreator.Winforms.CharacterRaces
             protected set { inebriation = value; }
         }
 
+        // constructor
+        public CharacterRaces()
+        {
+            Name = " ";
+            Strength = 0;
+            Charisma = 0;
+            Agility = 0;
+            Inebriation = 0;
+            Constitution = 0;
+            Intelligence = 0;
 
+
+        }
 
 
 

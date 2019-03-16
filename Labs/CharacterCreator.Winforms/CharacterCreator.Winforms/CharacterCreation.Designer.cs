@@ -100,7 +100,8 @@
             "Elf",
             "Gnome",
             "Half-elf",
-            "Human"});
+            "Human",
+            "Metalhead"});
             this.Cb_Race.Location = new System.Drawing.Point(122, 70);
             this.Cb_Race.Name = "Cb_Race";
             this.Cb_Race.Size = new System.Drawing.Size(144, 21);
@@ -133,7 +134,7 @@
             "Priest",
             "Rogue",
             "Wizard",
-            "Metalhead"});
+            "Bard"});
             this.Cb_Profession.Location = new System.Drawing.Point(118, 125);
             this.Cb_Profession.Name = "Cb_Profession";
             this.Cb_Profession.Size = new System.Drawing.Size(147, 21);

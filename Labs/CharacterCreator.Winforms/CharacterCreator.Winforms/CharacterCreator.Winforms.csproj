@@ -53,6 +53,7 @@
       <DependentUpon>CharacterCreation.cs</DependentUpon>
     </Compile>
     <Compile Include="CharacterRaces\CharacterRaces.cs" />
+    <Compile Include="CharacterRaces\Dwarf.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
