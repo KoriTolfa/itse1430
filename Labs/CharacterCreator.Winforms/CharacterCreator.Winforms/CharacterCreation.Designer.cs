@@ -31,8 +31,8 @@
             this.Lbl_CharacterName = new System.Windows.Forms.Label();
             this.Txt_CharacterName = new System.Windows.Forms.TextBox();
             this.Gb_Gender = new System.Windows.Forms.GroupBox();
-            this.Rb_Female = new System.Windows.Forms.RadioButton();
             this.Rb_Male = new System.Windows.Forms.RadioButton();
+            this.Rb_Female = new System.Windows.Forms.RadioButton();
             this.Cb_Race = new System.Windows.Forms.ComboBox();
             this.Lbl_Race = new System.Windows.Forms.Label();
             this.Lbl_Profession = new System.Windows.Forms.Label();
@@ -70,17 +70,6 @@
             this.Gb_Gender.TabStop = false;
             this.Gb_Gender.Text = "Character Gender";
             // 
-            // Rb_Female
-            // 
-            this.Rb_Female.AutoSize = true;
-            this.Rb_Female.Location = new System.Drawing.Point(18, 35);
-            this.Rb_Female.Name = "Rb_Female";
-            this.Rb_Female.Size = new System.Drawing.Size(59, 17);
-            this.Rb_Female.TabIndex = 0;
-            this.Rb_Female.TabStop = true;
-            this.Rb_Female.Text = "Female";
-            this.Rb_Female.UseVisualStyleBackColor = true;
-            // 
             // Rb_Male
             // 
             this.Rb_Male.AutoSize = true;
@@ -91,6 +80,17 @@
             this.Rb_Male.TabStop = true;
             this.Rb_Male.Text = "Male";
             this.Rb_Male.UseVisualStyleBackColor = true;
+            // 
+            // Rb_Female
+            // 
+            this.Rb_Female.AutoSize = true;
+            this.Rb_Female.Location = new System.Drawing.Point(18, 35);
+            this.Rb_Female.Name = "Rb_Female";
+            this.Rb_Female.Size = new System.Drawing.Size(59, 17);
+            this.Rb_Female.TabIndex = 0;
+            this.Rb_Female.TabStop = true;
+            this.Rb_Female.Text = "Female";
+            this.Rb_Female.UseVisualStyleBackColor = true;
             // 
             // Cb_Race
             // 
@@ -158,6 +158,7 @@
             this.B_ExitCharCreate.TabIndex = 8;
             this.B_ExitCharCreate.Text = "Exit";
             this.B_ExitCharCreate.UseVisualStyleBackColor = true;
+            this.B_ExitCharCreate.Click += new System.EventHandler(this.B_ExitCharCreate_Click);
             // 
             // CharacterCreation
             // 

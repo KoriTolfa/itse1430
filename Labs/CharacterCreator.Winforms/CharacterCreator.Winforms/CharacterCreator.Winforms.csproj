@@ -54,6 +54,11 @@
     </Compile>
     <Compile Include="CharacterRaces\CharacterRaces.cs" />
     <Compile Include="CharacterRaces\Dwarf.cs" />
+    <Compile Include="CharacterRaces\Elf.cs" />
+    <Compile Include="CharacterRaces\Gnome.cs" />
+    <Compile Include="CharacterRaces\HalfElf.cs" />
+    <Compile Include="CharacterRaces\Human.cs" />
+    <Compile Include="CharacterRaces\Metalhead.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

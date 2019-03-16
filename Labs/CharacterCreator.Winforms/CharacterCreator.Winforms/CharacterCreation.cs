@@ -31,7 +31,13 @@ namespace CharacterCreator.Winforms
         private void B_SaveCharacter_Click(object sender, EventArgs e)
         {
             //Dwarf Object 
-            Dwarf user1 = new Dwarf();
+            Dwarf Char1 = new Dwarf();
+            Elf Char2 = new Elf();
+            Gnome Char3 = new Gnome();
+            HalfElf Char4 = new HalfElf();
+            Human Char5 = new Human();
+            Metalhead Char6= new Metalhead ();
+
         
 
             string output = " ";
@@ -42,6 +48,11 @@ namespace CharacterCreator.Winforms
             output += "\n Race: " + Cb_Race.Text;
             output += "\n Profession: " + Cb_Profession.Text;
             MessageBox.Show(output);
+
+        }
+
+        private void B_ExitCharCreate_Click(object sender, EventArgs e)
+        {
 
         }
     }
