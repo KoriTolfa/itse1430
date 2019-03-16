@@ -26,5 +26,18 @@ namespace CharacterCreator.Winforms
         {
 
         }
+
+        private void B_SaveCharacter_Click(object sender, EventArgs e)
+        {
+            string output = " ";
+            output += "Name: " + Txt_CharacterName.Text;
+
+            //Check Gender
+            output += "\nGender: " + (string)(this.Rb_Female.Checked ? "Female" : "Male"); //see which they have checked
+            output += "\n Race: " + Cb_Race.Text;
+            output += "\n Profession: " + Cb_Profession.Text;
+            MessageBox.Show(output);
+
+        }
     }
 }

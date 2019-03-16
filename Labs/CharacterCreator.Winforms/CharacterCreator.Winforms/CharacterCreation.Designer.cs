@@ -36,7 +36,9 @@
             this.Cb_Race = new System.Windows.Forms.ComboBox();
             this.Lbl_Race = new System.Windows.Forms.Label();
             this.Lbl_Profession = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.Cb_Profession = new System.Windows.Forms.ComboBox();
+            this.B_SaveCharacter = new System.Windows.Forms.Button();
+            this.B_ExitCharCreate = new System.Windows.Forms.Button();
             this.Gb_Gender.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -122,27 +124,48 @@
             this.Lbl_Profession.TabIndex = 5;
             this.Lbl_Profession.Text = "Profession";
             // 
-            // comboBox1
+            // Cb_Profession
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.Cb_Profession.FormattingEnabled = true;
+            this.Cb_Profession.Items.AddRange(new object[] {
             "Fighter",
             "Hunter",
             "Priest",
             "Rogue",
             "Wizard",
             "Metalhead"});
-            this.comboBox1.Location = new System.Drawing.Point(118, 125);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(147, 21);
-            this.comboBox1.TabIndex = 6;
+            this.Cb_Profession.Location = new System.Drawing.Point(118, 125);
+            this.Cb_Profession.Name = "Cb_Profession";
+            this.Cb_Profession.Size = new System.Drawing.Size(147, 21);
+            this.Cb_Profession.TabIndex = 6;
+            // 
+            // B_SaveCharacter
+            // 
+            this.B_SaveCharacter.Location = new System.Drawing.Point(31, 312);
+            this.B_SaveCharacter.Name = "B_SaveCharacter";
+            this.B_SaveCharacter.Size = new System.Drawing.Size(91, 30);
+            this.B_SaveCharacter.TabIndex = 7;
+            this.B_SaveCharacter.Text = "Save Character";
+            this.B_SaveCharacter.UseVisualStyleBackColor = true;
+            this.B_SaveCharacter.Click += new System.EventHandler(this.B_SaveCharacter_Click);
+            // 
+            // B_ExitCharCreate
+            // 
+            this.B_ExitCharCreate.Location = new System.Drawing.Point(149, 312);
+            this.B_ExitCharCreate.Name = "B_ExitCharCreate";
+            this.B_ExitCharCreate.Size = new System.Drawing.Size(91, 30);
+            this.B_ExitCharCreate.TabIndex = 8;
+            this.B_ExitCharCreate.Text = "Exit";
+            this.B_ExitCharCreate.UseVisualStyleBackColor = true;
             // 
             // CharacterCreation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(334, 412);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.B_ExitCharCreate);
+            this.Controls.Add(this.B_SaveCharacter);
+            this.Controls.Add(this.Cb_Profession);
             this.Controls.Add(this.Lbl_Profession);
             this.Controls.Add(this.Lbl_Race);
             this.Controls.Add(this.Cb_Race);
@@ -171,6 +194,8 @@
         private System.Windows.Forms.ComboBox Cb_Race;
         private System.Windows.Forms.Label Lbl_Race;
         private System.Windows.Forms.Label Lbl_Profession;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox Cb_Profession;
+        private System.Windows.Forms.Button B_SaveCharacter;
+        private System.Windows.Forms.Button B_ExitCharCreate;
     }
 }
