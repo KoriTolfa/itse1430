@@ -28,137 +28,64 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lbl_CharacterName = new System.Windows.Forms.Label();
-            this.Txt_CharacterName = new System.Windows.Forms.TextBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.Rb_Male = new System.Windows.Forms.RadioButton();
-            this.Rb_Female = new System.Windows.Forms.RadioButton();
-            this.Cb_CharacterClass = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.groupBox1.SuspendLayout();
+            this.B_CreateCharacter = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // lbl_CharacterName
-            // 
-            this.lbl_CharacterName.AutoSize = true;
-            this.lbl_CharacterName.Location = new System.Drawing.Point(22, 23);
-            this.lbl_CharacterName.Name = "lbl_CharacterName";
-            this.lbl_CharacterName.Size = new System.Drawing.Size(35, 13);
-            this.lbl_CharacterName.TabIndex = 0;
-            this.lbl_CharacterName.Text = "Name";
-            this.lbl_CharacterName.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // Txt_CharacterName
-            // 
-            this.Txt_CharacterName.Location = new System.Drawing.Point(63, 23);
-            this.Txt_CharacterName.Name = "Txt_CharacterName";
-            this.Txt_CharacterName.Size = new System.Drawing.Size(100, 20);
-            this.Txt_CharacterName.TabIndex = 1;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.Rb_Female);
-            this.groupBox1.Controls.Add(this.Rb_Male);
-            this.groupBox1.Location = new System.Drawing.Point(63, 157);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(137, 68);
-            this.groupBox1.TabIndex = 2;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Character Gender";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
-            // 
-            // Rb_Male
-            // 
-            this.Rb_Male.AutoSize = true;
-            this.Rb_Male.Location = new System.Drawing.Point(17, 34);
-            this.Rb_Male.Name = "Rb_Male";
-            this.Rb_Male.Size = new System.Drawing.Size(48, 17);
-            this.Rb_Male.TabIndex = 0;
-            this.Rb_Male.TabStop = true;
-            this.Rb_Male.Text = "Male";
-            this.Rb_Male.UseVisualStyleBackColor = true;
-            // 
-            // Rb_Female
-            // 
-            this.Rb_Female.AutoSize = true;
-            this.Rb_Female.Location = new System.Drawing.Point(71, 34);
-            this.Rb_Female.Name = "Rb_Female";
-            this.Rb_Female.Size = new System.Drawing.Size(59, 17);
-            this.Rb_Female.TabIndex = 1;
-            this.Rb_Female.TabStop = true;
-            this.Rb_Female.Text = "Female";
-            this.Rb_Female.UseVisualStyleBackColor = true;
-            // 
-            // Cb_CharacterClass
-            // 
-            this.Cb_CharacterClass.FormattingEnabled = true;
-            this.Cb_CharacterClass.Items.AddRange(new object[] {
-            "Dwarf",
-            "Elf",
-            "Gnome",
-            "Half Elf",
-            "Human",
-            "Metal Head"});
-            this.Cb_CharacterClass.Location = new System.Drawing.Point(63, 73);
-            this.Cb_CharacterClass.Name = "Cb_CharacterClass";
-            this.Cb_CharacterClass.Size = new System.Drawing.Size(121, 21);
-            this.Cb_CharacterClass.TabIndex = 3;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(24, 73);
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(23, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(33, 13);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Race";
-            this.label1.Click += new System.EventHandler(this.label1_Click_1);
+            this.label1.Size = new System.Drawing.Size(346, 37);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "RPG Character Creator";
+            this.label1.Click += new System.EventHandler(this.label1_Click_2);
             // 
-            // comboBox1
+            // B_CreateCharacter
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Fighter",
-            "Hunter",
-            "Priest",
-            "Rogue",
-            "Wizard"});
-            this.comboBox1.Location = new System.Drawing.Point(63, 110);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 5;
+            this.B_CreateCharacter.Location = new System.Drawing.Point(30, 223);
+            this.B_CreateCharacter.Name = "B_CreateCharacter";
+            this.B_CreateCharacter.Size = new System.Drawing.Size(90, 26);
+            this.B_CreateCharacter.TabIndex = 1;
+            this.B_CreateCharacter.Text = "New Character";
+            this.B_CreateCharacter.UseVisualStyleBackColor = true;
             // 
-            // label2
+            // button1
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(1, 110);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 13);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Profession";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.button1.Location = new System.Drawing.Point(147, 223);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(90, 26);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Edit  Character";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(279, 223);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(90, 26);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "Exit";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(529, 412);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.B_CreateCharacter);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.Cb_CharacterClass);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.Txt_CharacterName);
-            this.Controls.Add(this.lbl_CharacterName);
             this.MinimumSize = new System.Drawing.Size(260, 420);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Character Creator";
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -166,15 +93,10 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lbl_CharacterName;
-        private System.Windows.Forms.TextBox Txt_CharacterName;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton Rb_Female;
-        private System.Windows.Forms.RadioButton Rb_Male;
-        private System.Windows.Forms.ComboBox Cb_CharacterClass;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button B_CreateCharacter;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }
 
