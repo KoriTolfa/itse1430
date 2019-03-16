@@ -53,6 +53,7 @@
             this.B_CreateCharacter.TabIndex = 1;
             this.B_CreateCharacter.Text = "New Character";
             this.B_CreateCharacter.UseVisualStyleBackColor = true;
+            this.B_CreateCharacter.Click += new System.EventHandler(this.B_CreateCharacter_Click);
             // 
             // button1
             // 

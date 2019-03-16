@@ -46,5 +46,12 @@ namespace CharacterCreator.Winforms
         {
 
         }
+
+        private void B_CreateCharacter_Click(object sender, EventArgs e)
+        {
+            CharacterCreation Charcreator = new CharacterCreation();
+            Charcreator.Show();
+
+        }
     }
 }

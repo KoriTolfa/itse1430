@@ -141,7 +141,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(334, 412);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.Lbl_Profession);
             this.Controls.Add(this.Lbl_Race);
@@ -149,7 +149,9 @@
             this.Controls.Add(this.Gb_Gender);
             this.Controls.Add(this.Txt_CharacterName);
             this.Controls.Add(this.Lbl_CharacterName);
+            this.MinimumSize = new System.Drawing.Size(260, 420);
             this.Name = "CharacterCreation";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Character Creator";
             this.Load += new System.EventHandler(this.CharacterCreation_Load);
             this.Gb_Gender.ResumeLayout(false);
