@@ -58,6 +58,7 @@
             this.Txt_CharacterName.Name = "Txt_CharacterName";
             this.Txt_CharacterName.Size = new System.Drawing.Size(150, 20);
             this.Txt_CharacterName.TabIndex = 1;
+            this.Txt_CharacterName.TextChanged += new System.EventHandler(this.Txt_CharacterName_TextChanged);
             // 
             // Gb_Gender
             // 
@@ -156,7 +157,7 @@
             this.B_ExitCharCreate.Name = "B_ExitCharCreate";
             this.B_ExitCharCreate.Size = new System.Drawing.Size(91, 30);
             this.B_ExitCharCreate.TabIndex = 8;
-            this.B_ExitCharCreate.Text = "Exit";
+            this.B_ExitCharCreate.Text = "&Exit";
             this.B_ExitCharCreate.UseVisualStyleBackColor = true;
             this.B_ExitCharCreate.Click += new System.EventHandler(this.B_ExitCharCreate_Click);
             // 

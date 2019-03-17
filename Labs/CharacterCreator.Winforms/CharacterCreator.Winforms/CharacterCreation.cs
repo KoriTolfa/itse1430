@@ -39,19 +39,30 @@ namespace CharacterCreator.Winforms
             Metalhead Char6= new Metalhead ();
 
         
+            //check for empty fields
+            if (string.IsNullOrEmpty(Txt_CharacterName.Text))
+            {
+                MessageBox.Show("Must have a valid Character Name");
+                return;
+            }
+          
+            if (this.Rb_Female.Checked == false && this.Rb_Male.Checked ==false)
+            {
+                MessageBox.Show("Please choose a gender for you character");
+                return;
+            }
+            string gender = (string)(this.Rb_Female.Checked ? "Female" : "Male");
 
-            string output = " ";
-            output += "Name: " + Txt_CharacterName.Text;
-
-            //Check Gender
-            output += "\nGender: " + (string)(this.Rb_Female.Checked ? "Female" : "Male"); //see which they have checked
-            output += "\n Race: " + Cb_Race.Text;
-            output += "\n Profession: " + Cb_Profession.Text;
-            MessageBox.Show(output);
+           
 
         }
 
         private void B_ExitCharCreate_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
+        }
+
+        private void Txt_CharacterName_TextChanged(object sender, EventArgs e)
         {
 
         }

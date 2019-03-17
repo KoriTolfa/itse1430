@@ -6,10 +6,26 @@ using System.Threading.Tasks;
 
 namespace CharacterCreator.Winforms.CharacterRaces
 {
-    class Gnome
+   public  class Gnome : CharacterRaces
     {
         public Gnome() : base()
         {
+
+        }
+
+        public Gnome(string name, CharacterGender gender) : base() // call base constructor and change name and gender to user preference
+        {
+            Name = name;
+            Gender = gender;
+            Strength = 20;
+            Charisma = 50;
+            Agility = 80;
+            Inebriation = 0;
+            Constitution = 40;
+            Intelligence = 40;
+
+
+
 
         }
     }
