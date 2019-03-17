@@ -59,6 +59,7 @@
     <Compile Include="CharacterRaces\HalfElf.cs" />
     <Compile Include="CharacterRaces\Human.cs" />
     <Compile Include="CharacterRaces\Metalhead.cs" />
+    <Compile Include="CharacterRaces\Player.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

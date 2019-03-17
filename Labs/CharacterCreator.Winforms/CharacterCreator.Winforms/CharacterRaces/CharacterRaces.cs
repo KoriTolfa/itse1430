@@ -6,12 +6,16 @@ using System.Threading.Tasks;
 
 namespace CharacterCreator.Winforms.CharacterRaces
 {
-    public enum CharacterGender { Male, Female}
+    public enum CharacterGender { Male, Female, unknown}
+    public enum CharacterRace { Elf, HalfElf, Gnome, Human, Metalhead, Dwarf, unknown}
+
     public abstract class CharacterRaces //made this abstract to use a base for all other races
     {
         //fields
         protected string name;
         protected CharacterGender gender;
+        protected CharacterRace race;
+
         protected int strength, intelligence, agility, constitution, charisma, inebriation;
 
         //properties
@@ -20,7 +24,12 @@ namespace CharacterCreator.Winforms.CharacterRaces
             get { return name; }
             set { name = value; }
         }
+        public CharacterRace Race
+        {
+            get { return race; }
+            protected set { race = value; }
 
+        }
         public CharacterGender Gender
         {
             get { return gender; }
@@ -67,6 +76,8 @@ namespace CharacterCreator.Winforms.CharacterRaces
         public CharacterRaces()
         {
             Name = " ";
+            Gender = CharacterGender.unknown; //just giving it an unkown value for now
+            Race = CharacterRace.unknown;
             Strength = 0;
             Charisma = 0;
             Agility = 0;
