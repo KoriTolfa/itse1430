@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CharacterCreator.Winforms.CharacterRaces
 {
-    class Player : CharacterRaces
+    public class Player : CharacterRaces
     {
         public Player () :base ()
         {

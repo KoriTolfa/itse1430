@@ -6,6 +6,10 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CharacterCreator.Winforms.CharacterRaces;
+using System.IO;
+using System.Xml;
+using System.Xml.Serialization;
 using System.Windows.Forms;
 
 namespace CharacterCreator.Winforms
@@ -57,6 +61,10 @@ namespace CharacterCreator.Winforms
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
         }
     }
 }

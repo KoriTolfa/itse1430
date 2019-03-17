@@ -8,6 +8,7 @@ namespace CharacterCreator.Winforms.CharacterRaces
 {
     public enum CharacterGender { Male, Female, unknown}
     public enum CharacterRace { Elf, HalfElf, Gnome, Human, Metalhead, Dwarf, unknown}
+    public enum CharacterProfession {Fighter, Hunter, Priest, Rogue, Wizard, Bard, unkown }
 
     public abstract class CharacterRaces //made this abstract to use a base for all other races
     {
@@ -15,6 +16,8 @@ namespace CharacterCreator.Winforms.CharacterRaces
         protected string name;
         protected CharacterGender gender;
         protected CharacterRace race;
+        protected CharacterProfession profession;
+
 
         protected int strength, intelligence, agility, constitution, charisma, inebriation;
 
@@ -27,7 +30,7 @@ namespace CharacterCreator.Winforms.CharacterRaces
         public CharacterRace Race
         {
             get { return race; }
-            protected set { race = value; }
+             set { race = value; }
 
         }
         public CharacterGender Gender
@@ -39,37 +42,37 @@ namespace CharacterCreator.Winforms.CharacterRaces
         public int Strength
         {
             get { return strength; }
-            protected set { strength = value; }
+             set { strength = value; }
         }
         public int Intelligence
         {
             get { return intelligence; }
-            protected set { intelligence = value; }
+             set { intelligence = value; }
         }
 
         public int Constitution
         {
             get { return constitution; }
-            protected set { constitution = value; }
+             set { constitution = value; }
         }
 
         public int Agility
         {
             get { return agility; }
-            protected set { agility = value; }
+             set { agility = value; }
         }
 
         public int Charisma
         {
             get { return charisma; }
-            protected set { charisma = value; }
+             set { charisma = value; }
         }
 
 
         public int Inebriation
         {
             get { return inebriation; }
-            protected set { inebriation = value; }
+             set { inebriation = value; }
         }
 
         // constructor
@@ -78,6 +81,7 @@ namespace CharacterCreator.Winforms.CharacterRaces
             Name = " ";
             Gender = CharacterGender.unknown; //just giving it an unkown value for now
             Race = CharacterRace.unknown;
+            profession = CharacterProfession.unkown;
             Strength = 0;
             Charisma = 0;
             Agility = 0;

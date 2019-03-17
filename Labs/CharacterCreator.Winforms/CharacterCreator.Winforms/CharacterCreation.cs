@@ -34,13 +34,7 @@ namespace CharacterCreator.Winforms
 
         private void B_SaveCharacter_Click(object sender, EventArgs e)
         {
-            //Dwarf Object 
            
-            Elf Char2 = new Elf();
-            Gnome Char3 = new Gnome();
-            HalfElf Char4 = new HalfElf();
-            Human Char5 = new Human();
-            Metalhead Char6= new Metalhead ();
 
         
             //check for empty fields
@@ -64,30 +58,50 @@ namespace CharacterCreator.Winforms
                 GenderSelect = CharacterGender.Female;
             else 
                 GenderSelect = CharacterGender.Male;
-            Dwarf Char1 = new Dwarf(name, GenderSelect);
 
             CharacterRace race;
-            if (this.Cb_Race.Text == "Dwarf ")
+            if (this.Cb_Race.Text == "Dwarf")
                 race = CharacterRace.Dwarf;
-            else if (this.Cb_Race.Text == "Elf ")
+            else if (this.Cb_Race.Text == "Elf")
                 race = CharacterRace.Elf;
-            else if (this.Cb_Race.Text == "Gnome ")
+            else if (this.Cb_Race.Text == "Gnome")
                 race = CharacterRace.Gnome;
-            else if (this.Cb_Race.Text == "HalfElf ")
+            else if (this.Cb_Race.Text == "Half-elf")
                 race = CharacterRace.HalfElf;
-            else if (this.Cb_Race.Text == "Gnome ")
+            else if (this.Cb_Race.Text == "Gnome")
                 race = CharacterRace.Gnome;
-            else if (this.Cb_Race.Text == "Human ")
+            else if (this.Cb_Race.Text == "Human")
                 race = CharacterRace.Human;
-            else if (this.Cb_Race.Text == "MetalHead ")
+            else if (this.Cb_Race.Text == "Metalhead")
                 race = CharacterRace.Metalhead;
             else
             {
-                MessageBox.Show("Please choose a valid class for your character");
+                MessageBox.Show("Please choose a valid race for your character");
+                return;
+            }
+            CharacterProfession profession;
+            if (this.Cb_Profession.Text == "Fighter")
+                profession  = CharacterProfession.Fighter;
+            else if (this.Cb_Profession.Text == "Hunter")
+                profession = CharacterProfession.Hunter;
+            else if (this.Cb_Profession.Text == "Priest")
+                profession = CharacterProfession.Priest;
+            else if (this.Cb_Profession.Text == "Rogue")
+                profession = CharacterProfession.Rogue;
+            else if (this.Cb_Profession.Text == "Wizard")
+                profession = CharacterProfession.Wizard;
+            else if (this.Cb_Profession.Text == "Bard")
+                profession = CharacterProfession.Bard;
+            
+            else
+            {
+                MessageBox.Show("Please choose a valid profession for your character");
                 return;
             }
             //create our player object
             Player player1 = new Player(name, GenderSelect, race);
+            //store data
+            StorePlayerData(player1);
             this.Close();
         }
 
@@ -100,7 +114,7 @@ namespace CharacterCreator.Winforms
         {
 
         }
-        private static String SettingsFolder
+        public static String SettingsFolder
         {
             get
             {
@@ -116,18 +130,20 @@ namespace CharacterCreator.Winforms
                 return folder;
 
 
+
             }
         }
-        private void StorePlayerData(Player player)
+        public void StorePlayerData(Player player)
         {
             using (Stream stream = File.Create(SettingsFile))
             {
                 XmlSerializer Serial = new XmlSerializer(player.GetType());
                 Serial.Serialize(stream, player); //take character attributes and send to file
             }
+
         }
 
-        private static String SettingsFile
+        public static String SettingsFile
         {
             get
             {
@@ -138,5 +154,9 @@ namespace CharacterCreator.Winforms
         }
 
 
+
+
     }
+
+   
 }
