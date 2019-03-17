@@ -31,7 +31,7 @@ namespace CharacterCreator.Winforms
         private void B_SaveCharacter_Click(object sender, EventArgs e)
         {
             //Dwarf Object 
-            Dwarf Char1 = new Dwarf();
+           
             Elf Char2 = new Elf();
             Gnome Char3 = new Gnome();
             HalfElf Char4 = new HalfElf();
@@ -53,7 +53,14 @@ namespace CharacterCreator.Winforms
             }
             string gender = (string)(this.Rb_Female.Checked ? "Female" : "Male");
 
-           
+            string name = Txt_CharacterName.Text;
+            CharacterGender GenderSelect;
+            if (this.Rb_Female.Checked)
+                GenderSelect = CharacterGender.Female;
+            else 
+                GenderSelect = CharacterGender.Male;
+            Dwarf Char1 = new Dwarf(name, GenderSelect);
+
 
         }
 
