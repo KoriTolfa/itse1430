@@ -8,6 +8,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CharacterCreator.Winforms.CharacterRaces;
+using System.IO;
+using System.Xml;
+using System.Xml.Serialization; //trying to use serialization to save player data so we will see how this goes
+
 
 namespace CharacterCreator.Winforms
 {
@@ -96,5 +100,43 @@ namespace CharacterCreator.Winforms
         {
 
         }
+        private static String SettingsFolder
+        {
+            get
+            {
+                //string folder
+                string folder = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+                
+                //need to add folder path, i hope this works
+                folder = Path.Combine(folder, "Character Creator");
+                folder = Path.Combine(folder, "Player Settings");
+                //need to check for folder, and create one if not there
+                if (!Directory.Exists(folder))
+                    Directory.CreateDirectory(folder);
+                return folder;
+
+
+            }
+        }
+        private void StorePlayerData(Player player)
+        {
+            using (Stream stream = File.Create(SettingsFile))
+            {
+                XmlSerializer Serial = new XmlSerializer(player.GetType());
+                Serial.Serialize(stream, player); //take character attributes and send to file
+            }
+        }
+
+        private static String SettingsFile
+        {
+            get
+            {
+                return Path.Combine(SettingsFolder, "PlayerSettings.xml");
+
+            }
+
+        }
+
+
     }
 }
