@@ -12,7 +12,7 @@ namespace CharacterCreator.Winforms.CharacterRaces
         {
 
         }
-        public Player(string name, CharacterGender GenderSelect, CharacterRace race) :base()
+        public Player(string name, CharacterGender GenderSelect, CharacterRace race, CharacterProfession profession) :base()
         {
             Name = name;
             Gender = GenderSelect;

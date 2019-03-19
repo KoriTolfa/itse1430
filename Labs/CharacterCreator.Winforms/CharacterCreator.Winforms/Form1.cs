@@ -65,6 +65,14 @@ namespace CharacterCreator.Winforms
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //edit
+           
+        }
+
+        private void B_About_Click(object sender, EventArgs e)
+        {
+            About about = new About();
+            about.Show();
         }
     }
 }

@@ -99,11 +99,17 @@ namespace CharacterCreator.Winforms
                 return;
             }
             //create our player object
-            Player player1 = new Player(name, GenderSelect, race);
+            Player player1 = new Player(name, GenderSelect, race, profession);
             //store data
             StorePlayerData(player1);
             this.Close();
         }
+
+     
+  
+
+
+ 
 
         private void B_ExitCharCreate_Click(object sender, EventArgs e)
         {
@@ -121,7 +127,7 @@ namespace CharacterCreator.Winforms
                 //string folder
                 string folder = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
                 
-                //need to add folder path, i hope this works
+                //need to add folder path
                 folder = Path.Combine(folder, "Character Creator");
                 folder = Path.Combine(folder, "Player Settings");
                 //need to check for folder, and create one if not there
