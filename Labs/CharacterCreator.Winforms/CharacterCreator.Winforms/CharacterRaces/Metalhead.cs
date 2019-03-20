@@ -20,7 +20,7 @@ namespace CharacterCreator.Winforms.CharacterRaces
            Gender = gender;
             Strength = 40;
             Charisma = 50;
-            Agility = 10;
+            Agility = 30;
             Inebriation = 90;
             Constitution = 10;
             Intelligence = 10;

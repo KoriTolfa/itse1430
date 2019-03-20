@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace CharacterCreator.Winforms
 {
-    public partial class About : Form
+    public partial class DeleteCharacter : Form
     {
-        public About()
+        public DeleteCharacter()
         {
             InitializeComponent();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void DeleteCharacter_Load(object sender, EventArgs e)
         {
 
         }
@@ -25,16 +25,6 @@ namespace CharacterCreator.Winforms
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void textBox1_TextChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void TxtBx_CharacterStats_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

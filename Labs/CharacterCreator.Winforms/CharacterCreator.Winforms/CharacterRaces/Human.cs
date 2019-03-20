@@ -20,7 +20,7 @@ namespace CharacterCreator.Winforms.CharacterRaces
             Charisma = 50;
             Agility = 50;
             Inebriation = 0;
-            Constitution = 30;
+            Constitution = 45;
             Intelligence = 55;
 
         }

@@ -74,5 +74,12 @@ namespace CharacterCreator.Winforms
             About about = new About();
             about.Show();
         }
+
+        private void B_DeleteCharacter_Click(object sender, EventArgs e)
+        {
+            DeleteCharacter delete = new DeleteCharacter();
+            delete.Show();
+        }
     }
+    
 }

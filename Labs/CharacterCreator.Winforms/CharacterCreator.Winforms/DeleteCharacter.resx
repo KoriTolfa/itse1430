@@ -117,24 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="TxtBx_CharacterStats.Text" xml:space="preserve">
-    <value>Dwarf - Strength 60, Charisma 20, Agility 30, Inebriation  0, Constitution 60, Intelligence  20.
-Dwarfs are great tanks, they deal a ton of damage for long periods of time, not the most charming in social situations though
-
-Elf - Strength 30, Charisma 60, Agility 70,  Inebriation 0, Constitution 30, Intelligence 70.
-Amazingly agile and smart, but prone to physical damage, elfs are great for dexterity and magic based combat.
-
-Gnome - Strength 20, Charisma 50, Agility 80,  Inebriation 0,  Constitution 40, Intelligence 40.
-Sweet talkers with amazing speed and agility, gnomes make great bards.
-
-Half-Elf -  Strength 35, Charisma 55, Agility 60, Inebriation 0, Constitution 40, Intelligence  65.
-Though not as charming or agile as an Elf, their increased strength and constitution makes them a great starting character.
-
-Human - Strength 35, Charisma 50, Agility 50, Inebriation 0, Constitution 50, Intelligence 55.
-Not the smartest or the fastest but their high constitution gives a slight edge over the competition when it comes to taking damage.
-
-Metal Head -  Strength 35, Charisma 50,  Agility 30, Inebriation  90, Constitution 70,  Intelligence 10.
-Drunk, loud, and a bit stinky, metal heads arent the fastest or smartest, but their high inebriation allows them to not feel as much pain and keep swinging when in combat.
-</value>
-  </data>
 </root>
