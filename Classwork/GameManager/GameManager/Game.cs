@@ -1,11 +1,13 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace GameManager
 {
     /// <summary>Represents a game.</summary>
-    public class Game
+    public class Game : IValidatableObject
     {
-        /// <summary>Gets or sets the unique ID of the game.</summary>
+                /// <summary>Gets or sets the unique ID of the game.</summary>
         public int Id { get; set; }
 
         /// <summary>Gets or sets the name of the game.</summary>
@@ -57,6 +59,18 @@ namespace GameManager
             //MyType.Foo(this);
 
             return true;
+        }
+
+        public IEnumerable<ValidationResult> Validate( ValidationContext validationContext )
+        {
+            var items = new List<ValidationResult>();
+            if (String.IsNullOrEmpty(Name))
+                items.Add(new ValidationResult("Name is required.", new[] { nameof(Name) }));
+            if (Price < 0)
+                items.Add(new ValidationResult(("price needs to be > or = to zero"), new[] { nameof(Price) }));
+
+            return items;
+                
         }
 
         #region Private Members

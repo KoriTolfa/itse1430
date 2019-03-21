@@ -25,6 +25,7 @@ namespace GameManager
             //    Name = "Oblivion",
             //    Description = "Medieval",
             //    Price = 89.99M,
+           
             //};
             //Add(game);
 
@@ -89,7 +90,7 @@ namespace GameManager
             throw new ArgumentOutOfRangeException(nameof(id), "Id must be > 0.");
 
         var index = GetIndex(id);
-        if (index >= 0)
+        if (index >= 0)f
             _items.RemoveAt(index);
 
     }
@@ -117,8 +118,10 @@ namespace GameManager
         return game;
     }
 
-    public Game[] GetAll()
-    {// how many games?
+    //public Game[] GetAll()
+    public IEnumerable<Game> GetAll()
+    { 
+        // how many games?
      //var game = _items[0];
 
         //int count = 0;
