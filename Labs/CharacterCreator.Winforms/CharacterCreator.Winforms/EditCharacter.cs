@@ -10,36 +10,16 @@ using System.Windows.Forms;
 
 namespace CharacterCreator.Winforms
 {
-    public partial class About : Form
+    public partial class EditCharacter : Form
     {
-        public About()
+        public EditCharacter()
         {
             InitializeComponent();
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void textBox1_TextChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void TxtBx_CharacterStats_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void About_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -65,6 +65,8 @@ namespace CharacterCreator.Winforms
 
         private void button1_Click(object sender, EventArgs e)
         {
+            EditCharacter edit = new EditCharacter();
+            edit.Show();
             //edit
            
         }

@@ -98,7 +98,7 @@ namespace CharacterCreator.Winforms
                 MessageBox.Show("Please choose a valid profession for your character");
                 return;
             }
-            //create our player object
+            //create  player object
             Player player1 = new Player(name, GenderSelect, race, profession);
             //store data
             StorePlayerData(player1);

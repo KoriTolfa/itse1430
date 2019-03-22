@@ -72,6 +72,12 @@
     <Compile Include="DeleteCharacter.Designer.cs">
       <DependentUpon>DeleteCharacter.cs</DependentUpon>
     </Compile>
+    <Compile Include="EditCharacter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditCharacter.Designer.cs">
+      <DependentUpon>EditCharacter.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +94,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DeleteCharacter.resx">
       <DependentUpon>DeleteCharacter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditCharacter.resx">
+      <DependentUpon>EditCharacter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

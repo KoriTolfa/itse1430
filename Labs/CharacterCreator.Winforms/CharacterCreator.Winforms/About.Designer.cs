@@ -88,6 +88,7 @@
             this.Controls.Add(this.B_AboutExit);
             this.Name = "About";
             this.Text = "About";
+            this.Load += new System.EventHandler(this.About_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
