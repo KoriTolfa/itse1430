@@ -58,6 +58,7 @@
     <Compile Include="CharacterCreation.Designer.cs">
       <DependentUpon>CharacterCreation.cs</DependentUpon>
     </Compile>
+    <Compile Include="CharacterManager.cs" />
     <Compile Include="CharacterRaces\CharacterRaces.cs" />
     <Compile Include="CharacterRaces\Dwarf.cs" />
     <Compile Include="CharacterRaces\Elf.cs" />

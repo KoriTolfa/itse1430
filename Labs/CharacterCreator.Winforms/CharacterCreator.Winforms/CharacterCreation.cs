@@ -17,6 +17,8 @@ namespace CharacterCreator.Winforms
 {
     public partial class CharacterCreation : Form
     {
+        public Character currentCharacter;
+
         public CharacterCreation()
         {
             InitializeComponent();
@@ -99,9 +101,8 @@ namespace CharacterCreator.Winforms
                 return;
             }
             //create  player object
-            Player player1 = new Player(name, GenderSelect, race, profession);
+            currentCharacter = new Character(name, GenderSelect, race, profession);
             //store data
-            StorePlayerData(player1);
             this.Close();
         }
 
@@ -139,7 +140,9 @@ namespace CharacterCreator.Winforms
 
             }
         }
-        public void StorePlayerData(Player player)
+
+
+      /*  public Character GetPlayerData(Player player)
         {
             using (Stream stream = File.Create(SettingsFile))
             {
@@ -147,7 +150,7 @@ namespace CharacterCreator.Winforms
                 Serial.Serialize(stream, player); //take character attributes and send to file
             }
 
-        }
+        } */
 
         public static String SettingsFile
         {
