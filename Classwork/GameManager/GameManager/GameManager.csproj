@@ -49,6 +49,7 @@
     <Compile Include="GameDatabase.cs" />
     <Compile Include="ObjectValidator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SeedDatabase.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
