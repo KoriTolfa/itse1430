@@ -46,12 +46,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
     <Compile Include="CharacterCreation.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CharacterCreation.Designer.cs">
       <DependentUpon>CharacterCreation.cs</DependentUpon>
     </Compile>
+    <Compile Include="CharacterManager.cs" />
     <Compile Include="CharacterRaces\CharacterRaces.cs" />
     <Compile Include="CharacterRaces\Dwarf.cs" />
     <Compile Include="CharacterRaces\Elf.cs" />
@@ -60,6 +67,18 @@
     <Compile Include="CharacterRaces\Human.cs" />
     <Compile Include="CharacterRaces\Metalhead.cs" />
     <Compile Include="CharacterRaces\Player.cs" />
+    <Compile Include="DeleteCharacter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteCharacter.Designer.cs">
+      <DependentUpon>DeleteCharacter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditCharacter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditCharacter.Designer.cs">
+      <DependentUpon>EditCharacter.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,8 +87,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CharacterCreation.resx">
       <DependentUpon>CharacterCreation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteCharacter.resx">
+      <DependentUpon>DeleteCharacter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditCharacter.resx">
+      <DependentUpon>EditCharacter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

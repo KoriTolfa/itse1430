@@ -30,8 +30,10 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.B_CreateCharacter = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.B_Edit = new System.Windows.Forms.Button();
+            this.B_Exit = new System.Windows.Forms.Button();
+            this.B_About = new System.Windows.Forms.Button();
+            this.B_DeleteCharacter = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -55,33 +57,55 @@
             this.B_CreateCharacter.UseVisualStyleBackColor = true;
             this.B_CreateCharacter.Click += new System.EventHandler(this.B_CreateCharacter_Click);
             // 
-            // button1
+            // B_Edit
             // 
-            this.button1.Location = new System.Drawing.Point(147, 223);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(90, 26);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Edit  Character";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.B_Edit.Location = new System.Drawing.Point(147, 223);
+            this.B_Edit.Name = "B_Edit";
+            this.B_Edit.Size = new System.Drawing.Size(90, 26);
+            this.B_Edit.TabIndex = 2;
+            this.B_Edit.Text = "Edit  Character";
+            this.B_Edit.UseVisualStyleBackColor = true;
+            this.B_Edit.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // B_Exit
             // 
-            this.button2.Location = new System.Drawing.Point(279, 223);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(90, 26);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Exit";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.B_Exit.Location = new System.Drawing.Point(147, 293);
+            this.B_Exit.Name = "B_Exit";
+            this.B_Exit.Size = new System.Drawing.Size(90, 26);
+            this.B_Exit.TabIndex = 5;
+            this.B_Exit.Text = "Exit";
+            this.B_Exit.UseVisualStyleBackColor = true;
+            this.B_Exit.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // B_About
+            // 
+            this.B_About.Location = new System.Drawing.Point(30, 296);
+            this.B_About.Name = "B_About";
+            this.B_About.Size = new System.Drawing.Size(75, 23);
+            this.B_About.TabIndex = 4;
+            this.B_About.Text = "About";
+            this.B_About.UseVisualStyleBackColor = true;
+            this.B_About.Click += new System.EventHandler(this.B_About_Click);
+            // 
+            // B_DeleteCharacter
+            // 
+            this.B_DeleteCharacter.Location = new System.Drawing.Point(298, 226);
+            this.B_DeleteCharacter.Name = "B_DeleteCharacter";
+            this.B_DeleteCharacter.Size = new System.Drawing.Size(101, 22);
+            this.B_DeleteCharacter.TabIndex = 6;
+            this.B_DeleteCharacter.Text = "Delete Character";
+            this.B_DeleteCharacter.UseVisualStyleBackColor = true;
+            this.B_DeleteCharacter.Click += new System.EventHandler(this.B_DeleteCharacter_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(529, 412);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.B_DeleteCharacter);
+            this.Controls.Add(this.B_About);
+            this.Controls.Add(this.B_Exit);
+            this.Controls.Add(this.B_Edit);
             this.Controls.Add(this.B_CreateCharacter);
             this.Controls.Add(this.label1);
             this.MinimumSize = new System.Drawing.Size(260, 420);
@@ -98,8 +122,10 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button B_CreateCharacter;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button B_Edit;
+        private System.Windows.Forms.Button B_Exit;
+        private System.Windows.Forms.Button B_About;
+        private System.Windows.Forms.Button B_DeleteCharacter;
     }
 }
 

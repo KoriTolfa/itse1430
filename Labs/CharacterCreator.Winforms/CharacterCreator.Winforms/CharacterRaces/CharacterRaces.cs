@@ -20,7 +20,7 @@ namespace CharacterCreator.Winforms.CharacterRaces
 
 
         protected int strength, intelligence, agility, constitution, charisma, inebriation;
-
+        
         //properties
         public string Name
         {
