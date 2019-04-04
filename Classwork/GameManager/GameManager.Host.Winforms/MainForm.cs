@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using GameManager.FileSystem;
+
+
 
 namespace GameManager.Host.Winforms
 {
@@ -37,17 +40,35 @@ namespace GameManager.Host.Winforms
         {
             base.OnLoad(e);
 
+            //Seed if database is empty
+            var games = _games.GetAll();
+            if (games.Count() == 0)
+                //SeedDatabase.Seed(_games);
+                _games.Seed();
+
             BindList();
         }
 
         private void BindList()
         {
             //Bind games to listbox
-            _listGames.Items.Clear();            
+            _listGames.Items.Clear();
             _listGames.DisplayMember = nameof(Game.Name);
 
             //Can use AddRange now that we don't care about null items
-            _listGames.Items.AddRange(_games.GetAll());
+            //var enumor = _games.GetAll();
+            //var enumoror = enumor.GetEnumerator();
+            //while (enumoror.MoveNext())
+            //{
+            //    var item = enumoror.Current;
+            //};
+            ////foreach (var item in enumor)
+            //{
+            //};
+
+            var items = _games.GetAll();
+            items = items.OrderBy(GetName);
+            _listGames.Items.AddRange(items.ToArray());
             //foreach (var game in _games)
             //{
             //    if (game != null)
@@ -55,23 +76,69 @@ namespace GameManager.Host.Winforms
             //};
         }
 
+        private string GetName( Game game )
+        {
+            return game.Name;
+        }
+
         private void OnGameAdd( object sender, EventArgs e )
         {
             //Display UI
             var form = new GameForm();
 
-            //Modal
-            if (form.ShowDialog(this) != DialogResult.OK)
-                return;
+            while (true)
+            {
+                //Modal
+                if (form.ShowDialog(this) != DialogResult.OK)
+                    return;
 
-            //Add
-            //_games[GetNextEmptyGame()] = form.Game;
-            _games.Add(form.Game);
+                //Add
+                try
+                {
+                    //Anything in here that raises an exception will
+                    //be sent to the catch block
+
+                    OnSafeAdd(form);
+                    break;
+                } catch (InvalidOperationException)
+                {
+                    MessageBox.Show(this, "Choose a better game.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                } catch (Exception ex)
+                {
+                    //Recover from errors
+                    DisplayError(ex);
+                };
+            };
 
             BindList();
-        }        
+        }
 
-        private GameDatabase _games = new GameDatabase();
+        private void DisplayError( Exception ex )
+        {
+            MessageBox.Show(this, ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void OnSafeAdd( GameForm form )
+        {
+            try
+            {
+                //_games[GetNextEmptyGame()] = form.Game;
+                _games.Add(form.Game);
+            } catch (NotImplementedException e)
+            {
+                //Rewriting an exception
+                throw new Exception("Not implemented yet", e);
+            } catch (Exception e)
+            {
+                //Log a message 
+
+                //Rethrow exception - wrong way
+                //throw e;
+                throw;
+            };
+        }
+
+        private IGameDatabase _games = new FileGameDatabase("games.dat");
 
         private void OnGameEdit( object sender, EventArgs e )
         {
@@ -84,13 +151,24 @@ namespace GameManager.Host.Winforms
             //Game to edit
             form.Game = game;
 
-            if (form.ShowDialog(this) != DialogResult.OK)
-                return;
+            while (true)
+            {
+                if (form.ShowDialog(this) != DialogResult.OK)
+                    return;
 
-            //UpdateGame(game, form.Game);            
-            _games.Update(game.Id, form.Game);
+                try
+                {
+                    //UpdateGame(game, form.Game);            
+                    _games.Update(game.Id, form.Game);
+                    break;
+                } catch (Exception ex)
+                {
+                    DisplayError(ex);
+                };
+            };
+
             BindList();
-        }        
+        }
 
         private void OnGameDelete( object sender, EventArgs e )
         {
@@ -105,14 +183,24 @@ namespace GameManager.Host.Winforms
                                MessageBoxIcon.Question) != DialogResult.Yes)
                 return;
 
-            //DeleteGame(selected);
-            _games.Delete(selected.Id);
+            try
+            {
+                //DeleteGame(selected);
+                _games.Delete(selected.Id);
+            } catch (Exception ex)
+            {
+                DisplayError(ex);
+            };
             BindList();
-        }        
+        }
 
         private Game GetSelectedGame()
         {
             var value = _listGames.SelectedItem;
+
+            //Typesafe conversion to IEnumerable<T>
+            //_listGames.Items.OfType<Game>(); //as
+            //_listGames.Items.Cast<Game>(); //(T)
 
             //C-style cast - don't do this
             //var game = (Game)value;
@@ -138,7 +226,7 @@ namespace GameManager.Host.Winforms
                 return;
             };
             base.OnFormClosing(e);
-        }        
+        }
 
         #region Unused Code (Demo only)
 
