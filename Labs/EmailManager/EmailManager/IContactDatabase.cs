@@ -8,7 +8,7 @@ namespace EmailManager
 {
     interface IContactDatabase
     {
-        void Add();
+        Contact Add(Contact contact);
         void Get();
         void GetAll();
         void Remove();

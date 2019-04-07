@@ -6,9 +6,23 @@ using System.Threading.Tasks;
 
 namespace EmailManager
 {
-    class Contact
+    public class Contact
     {
-        private string Name;
-        private string Email;
+       
+        public string Name
+        {
+            
+            //get { return _name ?? ""; }
+            get => _name ?? "";
+            //set { _name = value ?? ""; }
+            set => _name = value ?? "";
+        }
+        public string Email
+        {
+            get => _email ?? "";
+            set => _email = value;
+        }
+        private string _name = "";
+        private string _email = "";
     }
 }

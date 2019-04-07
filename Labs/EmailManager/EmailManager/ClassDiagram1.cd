@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="EmailManager.Contact" Collapsed="true">
+  <Class Name="EmailManager.Contact">
     <Position X="0.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAACAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAIAAAACAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAE=</HashCode>
       <FileName>Contact.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="EmailManager.Message" Collapsed="true">
-    <Position X="0.75" Y="1.5" Width="1.5" />
+  <Class Name="EmailManager.Message">
+    <Position X="5" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAACIABAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Message.cs</FileName>
@@ -17,7 +17,7 @@
   <Class Name="EmailManager.ContactDatabaseMgr">
     <Position X="2.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAYAAAAAAAAAAABAAAAABAAAAAAAAAAAAgAAAAAAAAA=</HashCode>
       <FileName>ContactDatabaseMgr.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -29,7 +29,7 @@
       <FileName>IContactDatabase.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="EmailManager.IMessageService" Collapsed="true">
+  <Interface Name="EmailManager.IMessageService">
     <Position X="2.5" Y="2.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
